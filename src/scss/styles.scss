@@ -1,0 +1,85 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body
+{
+    background: linear-gradient(skyblue, midnightblue);
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+html, body
+{
+    margin: 0;
+    height: 100%;
+}
+
+.custom-navbar
+{
+    width: 100%;
+    position: sticky;
+    height: 5rem;
+    background: linear-gradient(skyblue, rgb(100, 100, 240));
+    border-bottom: 0.5rem solid gold;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.row
+{
+    margin: auto;
+}
+
+.meal-item
+{
+    background-color: rgb(240, 230, 160);
+    border: 3px solid midnightblue;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.meal-title
+{
+    font-size: 2rem;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.meal-price
+{
+    color: midnightblue;
+    font-size: 1rem;
+}
+
+.dietary-preference
+{
+    font-style: oblique;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 900px) 
+{
+    .meal-title
+    {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) 
+{
+    .custom-navbar
+    {
+        font-size: 1rem;
+    }
+    .meal-title
+    {
+        font-size: 0.75rem;
+    }
+    p
+    {
+        font-size: 0.75rem;
+    }
+}
