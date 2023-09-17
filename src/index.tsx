@@ -11,7 +11,7 @@ root.render(
 <h1 className="custom-navbar">Welcome to Restaurant Menu Browser</h1>
 <div className="container text-center">
     <div className="row">
-    {Menu.map(meal => <MealComponent key={meal.props.key} title={meal.props.title} description={meal.props.description} price={meal.props.price} dietaryPreference={meal.props.dietaryPreference}/>)}
+    {Menu.map(meal => <MealComponent key={meal.props.key} title={meal.props.title} description={meal.props.description} price={meal.props.price} dietaryPreference={meal.props.dietaryPreference} imagePath={meal.props.imagePath}/>)}
     </div>
 </div>
 </div>

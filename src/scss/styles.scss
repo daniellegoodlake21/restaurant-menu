@@ -1,17 +1,17 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-body
-{
-    background: linear-gradient(skyblue, midnightblue);
-    background-repeat: no-repeat;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-html, body
+body, html
 {
     margin: 0;
     height: 100%;
+}
+
+body
+{
+    
+    background: repeating-linear-gradient(skyblue, midnightblue);
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .custom-navbar
@@ -86,4 +86,10 @@ html, body
     {
         margin: 0.25rem;
     }
+}
+
+.meal-image
+{
+    width: 300px;
+    border: 2px solid black;
 }

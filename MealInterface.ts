@@ -1,10 +1,12 @@
-import DietaryPreferences from "./src/DietaryPreferences";
+import DietaryPreference from "./src/DietaryPreference";
 
 export default interface Meal{
     key: number;
     title: string;
     description: string;
     price: number;
-    dietaryPreference: DietaryPreferences
+    dietaryPreference: DietaryPreference;
+    imagePath: string;
+    
   }
 
