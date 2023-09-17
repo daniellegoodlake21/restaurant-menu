@@ -28,10 +28,12 @@ const lasagne: MealInterface = {
     imagePath: "/restaurant-menu/images/lasagne.jpg"
 }
 
-let menu: MealComponent[] = [];
+export interface MenuInterface {
+    meals: MealComponent[]
+}
 
-menu.push(new MealComponent(macaroniCheese));
-menu.push(new MealComponent(chips));
-menu.push(new MealComponent(lasagne));
+const menu: MenuInterface = {
+    meals : [new MealComponent(macaroniCheese), new MealComponent(chips), new MealComponent(lasagne)]
+}
 
 export default menu;
