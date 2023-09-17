@@ -1,6 +1,2 @@
-export enum DietaryPreferences
-{
-    Meat = "Contains Meat",
-    Vegetarian = "Vegetarian",
-    Vegan = "Vegan",
-}
+type DietaryPreference = 'Contains Meat' | 'Vegetarian' | 'Vegan';
+export default DietaryPreference

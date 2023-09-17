@@ -1,4 +1,4 @@
-import { DietaryPreferences } from "./src/DietaryPreferences";
+import DietaryPreferences from "./src/DietaryPreferences";
 
 export default interface Meal{
     title: string;
