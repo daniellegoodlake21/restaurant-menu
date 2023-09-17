@@ -4,6 +4,7 @@ body, html
 {
     margin: 0;
     height: 100%;
+    background-color: midnightblue;
 }
 
 body
@@ -68,6 +69,15 @@ body
     }
 }
 
+
+.meal-image
+{
+
+    margin: 1rem;
+    width: 200px;
+    border: 2px solid black;
+}
+
 @media screen and (max-width: 550px) 
 {
     .custom-navbar
@@ -86,10 +96,8 @@ body
     {
         margin: 0.25rem;
     }
-}
-
-.meal-image
-{
-    width: 300px;
-    border: 2px solid black;
+    .meal-image
+    {
+        margin: 0.5rem;
+    }
 }
