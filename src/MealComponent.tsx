@@ -1,12 +1,6 @@
 import * as React from "react";
 import MealInterface from '../MealInterface'
 
-enum DietaryPreferences
-{
-    Meat = "Contains Meat",
-    Vegetarian = "Vegetarian",
-    Vegan = "Vegan"
-}
 
 export default class MealComponent extends React.Component <MealInterface, {}>
 {
