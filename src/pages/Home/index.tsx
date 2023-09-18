@@ -1,7 +1,6 @@
-import {Fragment, useContext} from "react";
-import { context } from "../../context";
+import {Fragment} from "react";
 import MealComponent from "../../MealComponent";
-import Menu, {MenuInterface} from "../../Menu";
+import Menu from "../../Menu";
 import * as React from "react";
 
 const Home: React.FC = (): JSX.Element =>
@@ -17,7 +16,7 @@ const Home: React.FC = (): JSX.Element =>
                     <div className="App">
                     <div className="container text-center">
                         <div className="row">
-                        {Menu.map(meal => <MealComponent key={meal.props.key} title={meal.props.title} description={meal.props.description} price={meal.props.price} dietaryPreference={meal.props.dietaryPreference} imagePath={meal.props.imagePath}/>)}
+                        {Menu.map(meal => <MealComponent key={meal.id} id={meal.id} title={meal.title} description={meal.description} price={meal.price} dietaryPreference={meal.dietaryPreference} imagePath={meal.imagePath}/>)}
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import DietaryPreference from "./src/DietaryPreference";
 
 export default interface Meal{
-    key: number;
+    id: number;
     title: string;
     description: string;
     price: number;

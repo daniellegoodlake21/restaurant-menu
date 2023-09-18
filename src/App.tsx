@@ -7,6 +7,7 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { initialState, reducer } from "./reducer";
+import MealInfo from "./pages/MealInfo";
 function App(): JSX.Element
 {
     const [state, dispatch] = React.useReducer(reducer, initialState)
@@ -18,6 +19,7 @@ function App(): JSX.Element
                 <BrowserRouter>
                     <Routes>
                         <Route path="/restaurant-menu" element={<Home/>}/>
+                        <Route path="/restaurant-menu/:id" element={<MealInfo/>}/>
                     </Routes>
                 </BrowserRouter>
             </main>

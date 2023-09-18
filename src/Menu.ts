@@ -2,7 +2,7 @@ import MealInterface from "../MealInterface";
 import MealComponent from "./MealComponent";
 
 const macaroniCheese: MealInterface = {
-    key: 1,
+    id: 1,
     title: "Macaroni Cheese",
     description: "Cheesy macaroni pasta with herbs, breadcrumbs and a side salad.",
     price: 7.99,
@@ -11,7 +11,7 @@ const macaroniCheese: MealInterface = {
 }
 
 const chips: MealInterface = {
-    key: 2,
+    id: 2,
     title: "Chips",
     description: "Chunky chips served with ketchup, salt and vinegar",
     price: 2.99,
@@ -20,7 +20,7 @@ const chips: MealInterface = {
 }
 
 const lasagne: MealInterface = {
-    key: 3,
+    id: 3,
     title: "Lasagne",
     description: "A classic pasta dish served with garlic bread and a side salad.",
     price: 10.99,
@@ -32,6 +32,5 @@ export interface MenuInterface {
     meals: MealInterface[]
 }
 
-const menu: MealComponent[] = [new MealComponent(macaroniCheese), new MealComponent(chips), new MealComponent(lasagne)];
-
+const menu = [macaroniCheese, chips, lasagne];
 export default menu;
