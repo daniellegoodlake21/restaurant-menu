@@ -4,19 +4,23 @@ import MealComponent from "./MealComponent";
 import "./scss/styles.scss"
 import { context } from "./context";
 import { useState } from "react";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { initialState, reducer } from "./reducer";
 function App(): JSX.Element
 {
-    const [state, setState] = useState<MenuInterface>({meals: []})
+    const [state, dispatch] = React.useReducer(reducer, initialState)
     
     return (
         <context.Provider value={state}>
         <div className="App">
-            <h1 className="custom-navbar">Welcome to Restaurant Menu Browser</h1>
-            <div className="container text-center">
-                <div className="row">
-                {Menu.meals.map(meal => <MealComponent key={meal.props.key} title={meal.props.title} description={meal.props.description} price={meal.props.price} dietaryPreference={meal.props.dietaryPreference} imagePath={meal.props.imagePath}/>)}
-                </div>
-            </div>
+            <main>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/restaurant-menu" element={<Home/>}/>
+                    </Routes>
+                </BrowserRouter>
+            </main>
         </div>
         </context.Provider>
     );

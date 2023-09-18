@@ -29,11 +29,9 @@ const lasagne: MealInterface = {
 }
 
 export interface MenuInterface {
-    meals: MealComponent[]
+    meals: MealInterface[]
 }
 
-const menu: MenuInterface = {
-    meals : [new MealComponent(macaroniCheese), new MealComponent(chips), new MealComponent(lasagne)]
-}
+const menu: MealComponent[] = [new MealComponent(macaroniCheese), new MealComponent(chips), new MealComponent(lasagne)];
 
 export default menu;
