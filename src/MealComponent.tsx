@@ -7,7 +7,13 @@ const MealComponent : React.FC<MealInterface> = ({id, title, description, price,
 
 {
     const navigate = useNavigate();
-    const handleClick = () => navigate('/restaurant-menu/'+id.toString());
+    const handleClick = () => 
+    {
+        if (window.location.href.endsWith("restaurant-menu/") || window.location.href.endsWith("restaurant-menu"))
+        {
+            navigate('/restaurant-menu/'+id.toString());
+        }
+    }
 
     return <div onClick={handleClick} className="col-lg-3 col-md-5 col-sm-12 meal-item">
             <h3 className="meal-title">{title}</h3>
