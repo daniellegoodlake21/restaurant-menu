@@ -39,6 +39,7 @@ body
     border: 3px solid midnightblue;
     padding: 1rem;
     margin: 1rem;
+    margin: 0 auto;
 }
 
 .meal-title
@@ -100,4 +101,12 @@ body
     {
         margin: 0.5rem;
     }
+}
+
+.btn-dark.btn-lg
+{
+    padding: 0.5rem;
+    display: flex;
+    margin: 1rem auto;
+
 }

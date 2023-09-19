@@ -8,8 +8,7 @@ const Home: React.FC = (): JSX.Element =>
    
     return (
         <Fragment>
-             <h1 className="custom-navbar">Welcome to Restaurant Menu Browser</h1>
-                   
+                  
             {
                 Menu.length ? (
                     <Fragment>
@@ -25,6 +24,6 @@ const Home: React.FC = (): JSX.Element =>
             }
         </Fragment>
     )
-}
+};
 
 export default Home;

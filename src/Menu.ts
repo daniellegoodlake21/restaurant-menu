@@ -29,7 +29,8 @@ const lasagne: MealInterface = {
 }
 
 export interface MenuInterface {
-    meals: MealInterface[]
+    meals: MealInterface[],
+    mealsInBasket: MealInterface[]
 }
 
 const menu = [macaroniCheese, chips, lasagne];

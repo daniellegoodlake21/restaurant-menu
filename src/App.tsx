@@ -1,13 +1,12 @@
-import Menu, { MenuInterface } from "./Menu";
 import * as React from "react";
-import MealComponent from "./MealComponent";
 import "./scss/styles.scss"
 import { context } from "./context";
-import { useState } from "react";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { initialState, reducer } from "./reducer";
 import MealInfo from "./pages/MealInfo";
+import Layout from "./layout";
+import Basket from "./pages/Basket";
 function App(): JSX.Element
 {
     const [state, dispatch] = React.useReducer(reducer, initialState)
@@ -17,10 +16,13 @@ function App(): JSX.Element
         <div className="App">
             <main>
                 <BrowserRouter>
-                    <Routes>
-                        <Route path="/restaurant-menu" element={<Home/>}/>
-                        <Route path="/restaurant-menu/:id" element={<MealInfo/>}/>
-                    </Routes>
+                    <Layout>
+                        <Routes>
+                            <Route path="/restaurant-menu" element={<Home/>}/>
+                            <Route path="/restaurant-menu/:id" element={<MealInfo dispatch={dispatch}/>}/>
+                            <Route path="/restaurant-menu/basket" element={<Basket/>}/>
+                        </Routes>
+                    </Layout>
                 </BrowserRouter>
             </main>
         </div>

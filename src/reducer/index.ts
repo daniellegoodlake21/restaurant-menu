@@ -4,7 +4,8 @@ import ActionInterface from "../Actions";
 import Meal from "../../MealInterface";
 
 export const initialState: MenuInterface = {
-    meals: Menu
+    meals: Menu,
+    mealsInBasket: []
 }
 
 
@@ -14,7 +15,10 @@ export const reducer = (state: MenuInterface, action: ActionInterface): MenuInte
     const {actionType, payload} = action;
     switch (actionType)
     {
-        case "ADD_MEAL_TO_BASKET": return {...state, meals: payload as Meal[]}
+        case "ADD_MEAL_TO_BASKET":
+            let newBasket = state.mealsInBasket;
+            newBasket.push(payload as Meal)
+            return {...state, mealsInBasket: newBasket};
         default: return state;
     }
 }
